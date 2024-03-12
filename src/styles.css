@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  padding: 2rem 1.5rem;
+  background-color: #145160;
+  width: 100%;
+  height: 550px;
+}
+#root {
+  width: 100%;
+}
+.app {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.list {
+  border-radius: 15px 0 0 15px;
+  display: grid;
+  grid-template-rows: 10% 75% 15%;
+  background: linear-gradient(to left, #c9ffbf, #ffafbd);
+  padding-inline: 15px;
+  max-height: 500px;
+  height: 500px;
+}
+.list h2 {
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+.list .playlist {
+  border-top: 3px dashed black;
+  border-bottom: 3px dashed #145160;
+  /* background-image: linear-gradient(0deg, #08aeea 0%, #2af598 100%); */
+  margin-top: 20px;
+  height: calc(100%-75px);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 0.75rem 1.5rem;
+  overflow-y: scroll;
+}
+.song_div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.song_div:hover {
+  transform: scaleY(1.2);
+  text-shadow: 0 5px 30px #000000dd;
+}
+.song_div p {
+  font-size: 24px;
+  font-weight: 600;
+  color: #4a867b;
+}
+.song_div button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: transparent;
+}
+.song_div i {
+  color: red;
+  font-size: 23px;
+}
+
+.upload {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-bottom: 10px;
+}
+
+.song_player {
+  max-height: 500px;
+  height: 500px;
+  padding-inline: 1.5rem;
+  text-align: center;
+  padding-block: 20px;
+  border-radius: 0 15px 15px 0;
+  background-color: #cf4ed6a3;
+  background: linear-gradient(to bottom, #f0c27b, #4b1248);
+}
+
+.song_player h1 {
+  margin-bottom: 15px;
+}
+
+.song_player .dp img {
+  width: 250px;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.song_title {
+  font-size: 25px;
+  color: bisque;
+  margin-bottom: 0.7rem;
+}
+
+#progress {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 6px;
+  background: #145160;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+}
+
+#progress::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background: #145160;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 8px solid #fff;
+}
+
+.controller {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  font-size: 28px;
+}
+
+/* Optional: Scrollbar customization */
+.playlist::-webkit-scrollbar {
+  width: thin; /* Adjust scrollbar width */
+}
+
+.playlist::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1); /* Customize track color */
+}
+
+.playlist::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0);
+}
